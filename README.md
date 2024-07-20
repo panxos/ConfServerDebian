@@ -1,86 +1,109 @@
-# Script de Configuración Automatizada para Debian
+# ConfServerDebian
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![PanXOS Logo](https://raw.githubusercontent.com/panxos/ConfServerDebian/main/panxos_logo.png)
 
 ## Descripción
 
-Este script automatiza la configuración de sistemas Debian y sus derivados, optimizando el entorno de trabajo con herramientas modernas y personalizaciones útiles. Diseñado para ahorrar tiempo en la configuración inicial de nuevos sistemas, este script instala y configura una variedad de herramientas y utilidades populares.
+ConfServerDebian es un script de configuración automatizada para servidores Debian y sus derivados. Este script está diseñado para configurar rápidamente un entorno de servidor con ZSH, herramientas útiles y una configuración optimizada para desarrolladores y administradores de sistemas.
+
+## ⚠️ Disclaimer
+
+**¡ATENCIÓN! Lea esto antes de utilizar el script:**
+
+Este script está diseñado para configurar Debian y sus derivados con un entorno ZSH para servidores internos y de pruebas. **NO SE RECOMIENDA** su uso en servidores de producción, ya que la instalación de herramientas adicionales podría aumentar las brechas de seguridad.
+
+**EL USO DE ESTE SCRIPT ES BAJO SU PROPIO RIESGO.**
+
+Al utilizar este script, usted reconoce que:
+1. Ha leído y entendido completamente su funcionamiento.
+2. Acepta que el autor no se hace responsable de ningún daño o pérdida de datos.
+3. Comprende que este script modifica configuraciones del sistema y instala software adicional.
+4. Se compromete a revisar el código antes de ejecutarlo en cualquier sistema crítico.
 
 ## Características
 
 - Actualización del sistema
 - Instalación de paquetes esenciales
-- Configuración de Zsh con Powerlevel10k
-- Instalación y configuración de Fastfetch
-- Instalación de LSD (LSDeluxe)
-- Configuración de plugins para Zsh
-- Instalación de Hack Nerd Fonts
+- Configuración de ZSH como shell predeterminada
+- Instalación y configuración de Powerlevel10k
+- Configuración de Nano con colores y números de línea
+- Instalación de Fastfetch para un resumen del sistema
+- Configuración de NTP para sincronización de tiempo
+- Instalación de fuentes Hack Nerd Font
 - Configuración de SSH
-- Personalización de Nano
+- Instalación de plugins útiles para ZSH
 
 ## Requisitos
 
 - Sistema operativo Debian o derivado (Ubuntu, Linux Mint, etc.)
-- Acceso root o permisos sudo
+- Acceso root o sudo
 - Conexión a Internet
 
 ## Instalación
 
-1. Clona este repositorio o descarga el script directamente:
+1. Clone este repositorio:
+   ```
+   git clone https://github.com/panxos/ConfServerDebian.git
+   ```
 
-```bash
-git clone https://github.com/PanX0S/debian-setup-script.git
-cd debian-setup-script
-```
+2. Navegue al directorio del script:
+   ```
+   cd ConfServerDebian
+   ```
 
-2. Dale permisos de ejecución al script:
+3. Haga el script ejecutable:
+   ```
+   chmod +x ConfServerDebian.sh
+   ```
 
-```bash
-chmod +x setup_script.sh
-```
-
-3. Ejecuta el script con privilegios de root:
-
-```bash
-sudo ./setup_script.sh
-```
+4. Ejecute el script como root:
+   ```
+   sudo ./ConfServerDebian.sh
+   ```
 
 ## Uso
 
-El script se ejecutará automáticamente una vez iniciado. Seguirá estos pasos:
+Siga las instrucciones en pantalla durante la ejecución del script. Se le pedirá confirmar ciertas acciones y proporcionar información cuando sea necesario.
 
-1. Actualización del sistema
-2. Instalación de paquetes necesarios
-3. Configuración de Zsh y Powerlevel10k
-4. Instalación y configuración de utilidades (Fastfetch, LSD, etc.)
-5. Configuración de plugins de Zsh
-6. Instalación de fuentes
-7. Configuración de SSH
+## Qué hace el script
 
-Al finalizar, se recomienda reiniciar el sistema para aplicar todos los cambios.
+1. Actualiza el sistema
+2. Instala paquetes necesarios
+3. Configura ZSH y Powerlevel10k
+4. Instala y configura Fastfetch
+5. Configura Nano con colores y números de línea
+6. Instala y configura plugins de ZSH
+7. Configura SSH
+8. Instala fuentes Hack Nerd Font
+9. Configura NTP para sincronización de tiempo
 
 ## Personalización
 
-Puedes personalizar el script editando las variables al inicio del archivo. Por ejemplo, puedes modificar la lista de paquetes a instalar o cambiar la configuración de ciertos elementos.
+Puede personalizar la configuración editando los siguientes archivos:
+- `.zshrc`: Configuración principal de ZSH
+- `.p10k.zsh`: Configuración de Powerlevel10k
+- `ConfServerDebian.sh`: El script principal, si desea modificar el proceso de instalación
 
 ## Contribución
 
-Las contribuciones son bienvenidas. 
+Las contribuciones son bienvenidas. Por favor, abra un issue para discutir cambios importantes antes de crear un pull request.
+
+## Soporte
+
+Si encuentra algún problema o tiene alguna pregunta, por favor abra un issue en este repositorio.
 
 ## Licencia
 
-Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
+Este proyecto está licenciado bajo la Licencia MIT. Vea el archivo `LICENSE` para más detalles.
 
-## Contacto
+## Autor
 
-PanX0S - faravena@soporteinfo.net
+Creado por PanXOS
 
-Enlace del proyecto: [https://github.com/PanX0S/debian-setup-script](https://github.com/PanX0S/debian-setup-script)
+Contacto: faravena@soporteinfo.net
 
-## Agradecimientos
+GitHub: [https://github.com/panxos](https://github.com/panxos)
 
-- [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [Fastfetch](https://github.com/LinusDierheimer/fastfetch)
-- [LSD](https://github.com/Peltoche/lsd)
-- [Zsh](https://www.zsh.org/)
-- [Hack Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
+---
+
+**Nota**: Recuerde siempre revisar y entender cualquier script antes de ejecutarlo en su sistema, especialmente con privilegios de root.
