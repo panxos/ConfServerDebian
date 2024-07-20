@@ -1,4 +1,4 @@
-# ConfServerDebian
+# Configuracion con ZSH para servidores personalizada.
 
 ![PanXOS Logo](https://raw.githubusercontent.com/panxos/ConfServerDebian/main/panxos_logo.png)
 
