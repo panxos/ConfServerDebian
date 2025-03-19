@@ -1,10 +1,36 @@
-# Configuracion con ZSH para servidores personalizada.
+# ConfServerDebian: Configuración ZSH Avanzada para Servidores Debian
 
-![PanXOS Logo](https://raw.githubusercontent.com/panxos/ConfServerDebian/main/panxos_logo.png)
+<div align="center">
+  <table border="0" cellspacing="10" cellpadding="10" style="border:none; background:none; margin: 0 auto;">
+    <tr style="border:none; background:none;">
+      <td align="center" style="border:none; background:none;">
+        <img src="https://raw.githubusercontent.com/panxos/ConfServerDebian/main/panxos_logo.png" alt="PanXOS Logo" width="300px">
+        <br>
+        <b>PanXOS</b>
+      </td>
+      <td align="center" style="border:none; background:none; font-size: 24px; font-weight: bold;">
+        ×
+      </td>
+      <td align="center" style="border:none; background:none;">
+        <img src="https://www.debian.org/logos/openlogo-nd-100.png" alt="Debian Logo" width="100px">
+        <br>
+        <b>Debian</b>
+      </td>
+    </tr>
+  </table>
+</div>
 
-## Descripción
+<div align="center">
+  
+![Version](https://img.shields.io/badge/Versión-1.1.0-blue)
+![Compatibilidad](https://img.shields.io/badge/Compatibilidad-Debian%2010%2B-A81D33)
+![Licencia](https://img.shields.io/badge/Licencia-MIT-green)
+  
+</div>
 
-ConfServerDebian es un script de configuración automatizada para servidores Debian y sus derivados. Este script está diseñado para configurar rápidamente un entorno de servidor con ZSH, herramientas útiles y una configuración optimizada para desarrolladores y administradores de sistemas.
+## 📋 Descripción
+
+**ConfServerDebian** es una solución completa para la configuración automatizada de servidores Debian y derivados. Este script transforma tu servidor en un entorno de administración potente con una interfaz ZSH moderna, herramientas optimizadas y configuraciones de seguridad mejoradas. Ideal para desarrolladores, administradores de sistemas y entusiastas de Linux que buscan un entorno de servidor eficiente y visualmente atractivo.
 
 ## ⚠️ Disclaimer
 
@@ -20,90 +46,116 @@ Al utilizar este script, usted reconoce que:
 3. Comprende que este script modifica configuraciones del sistema y instala software adicional.
 4. Se compromete a revisar el código antes de ejecutarlo en cualquier sistema crítico.
 
-## Características
+## ✨ Nuevas características (v1.1.0)
 
-- Actualización del sistema
-- Instalación de paquetes esenciales
-- Configuración de ZSH como shell predeterminada
-- Instalación y configuración de Powerlevel10k
-- Configuración de Nano con colores y números de línea
-- Instalación de Fastfetch para un resumen del sistema
-- Configuración de NTP para sincronización de tiempo
-- Instalación de fuentes Hack Nerd Font
-- Configuración de SSH
-- Instalación de plugins útiles para ZSH
+- **Instalación personalizable**: Seleccione qué componentes instalar según sus necesidades
+- **Integración con IPTABLES**: Reglas de seguridad de red preconfiguradas
+- **Fail2ban integrado**: Protección contra ataques de fuerza bruta
+- **Sistema de actualizaciones**: Verificación automática de nuevas versiones
+- **Optimizaciones para servidor**: Configuraciones pensadas para entornos de servidor
+- **Plugins de productividad**: Herramientas adicionales para ZSH
+- **Mejor manejo de errores**: Detección y manejo robusto de errores durante la instalación
+- **Copias de seguridad automáticas**: Respaldo de archivos de configuración importantes
 
-## Requisitos
+## 🚀 Características principales
 
-- Sistema operativo Debian o derivado (Ubuntu, Linux Mint, etc.)
+- **Entorno ZSH completo**: Shell ZSH con Powerlevel10k, plugins y temas
+- **Herramientas mejoradas**: Reemplazos modernos para comandos tradicionales (lsd, bat)
+- **Visualización de sistema**: Fastfetch para un resumen elegante del sistema
+- **Securización básica**: Configuraciones de seguridad fundamentales
+- **Fuentes optimizadas**: Hack Nerd Font para una experiencia visual óptima
+- **Configuración de tiempo**: Sincronización automática con servidores NTP
+- **Personalización completa**: Fácilmente adaptable a diferentes necesidades
+
+## 📋 Requisitos
+
+- Sistema operativo Debian 10+ o derivados (Ubuntu, Linux Mint, etc.)
 - Acceso root o sudo
 - Conexión a Internet
 
-## Instalación
+## ⚙️ Instalación rápida
 
-1. Clone este repositorio:
-   ```
-   git clone https://github.com/panxos/ConfServerDebian.git
-   ```
+```bash
+# Método 1: Descarga directa y ejecución
+wget -O ConfServerDebian.sh https://raw.githubusercontent.com/panxos/ConfServerDebian/main/ConfServerDebian.sh
+chmod +x ConfServerDebian.sh
+sudo ./ConfServerDebian.sh
 
-2. Navegue al directorio del script:
-   ```
-   cd ConfServerDebian
-   ```
+# Método 2: Clonando el repositorio
+git clone https://github.com/panxos/ConfServerDebian.git
+cd ConfServerDebian
+chmod +x ConfServerDebian.sh
+sudo ./ConfServerDebian.sh
+```
 
-3. Haga el script ejecutable:
-   ```
-   chmod +x ConfServerDebian.sh
-   ```
+## 🛠️ Componentes instalables
 
-4. Ejecute el script como root:
-   ```
-   sudo ./ConfServerDebian.sh
-   ```
+Durante la ejecución del script, podrá elegir qué componentes instalar:
 
-## Uso
+| Componente | Descripción |
+|------------|-------------|
+| **lsd** | Reemplazo moderno para `ls` con iconos y colores |
+| **bat** | Alternativa a `cat` con resaltado de sintaxis |
+| **fastfetch** | Información del sistema con estilo |
+| **Hack Nerd Fonts** | Fuentes optimizadas para terminales |
+| **IPTABLES** | Configuración de firewall básica |
+| **SSH para root** | Opcional: acceso SSH para el usuario root |
 
-Siga las instrucciones en pantalla durante la ejecución del script. Se le pedirá confirmar ciertas acciones y proporcionar información cuando sea necesario.
+## 🔒 Características de seguridad
 
-## Qué hace el script
+- **Firewall IPTABLES**: Reglas básicas de seguridad preconfiguradas
+- **Fail2ban**: Protección contra ataques de fuerza bruta
+- **Optimizaciones de seguridad**: Configuraciones de timeout, umask y más
+- **Copias de seguridad**: Respaldo automático de archivos de configuración importantes
+- **Verificación de contraseña**: Comprobación de la seguridad de contraseñas
 
-1. Actualiza el sistema
-2. Instala paquetes necesarios
-3. Configura ZSH y Powerlevel10k
-4. Instala y configura Fastfetch
-5. Configura Nano con colores y números de línea
-6. Instala y configura plugins de ZSH
-7. Configura SSH
-8. Instala fuentes Hack Nerd Font
-9. Configura NTP para sincronización de tiempo
+## 🖥️ Capturas de pantalla
 
-## Personalización
+<div align="center">
+  <i>Próximamente: Capturas de pantalla del entorno configurado</i>
+</div>
 
-Puede personalizar la configuración editando los siguientes archivos:
-- `.zshrc`: Configuración principal de ZSH
-- `.p10k.zsh`: Configuración de Powerlevel10k
-- `ConfServerDebian.sh`: El script principal, si desea modificar el proceso de instalación
+## 🔧 Personalización
 
-## Contribución
+El script está diseñado para ser altamente personalizable:
 
-Las contribuciones son bienvenidas. Por favor, abra un issue para discutir cambios importantes antes de crear un pull request.
+- **Archivos de configuración**:
+  - `.zshrc`: Configuración principal de ZSH
+  - `.p10k.zsh`: Configuración de Powerlevel10k
+  - `/etc/iptables/rules.v4`: Reglas de firewall (si se instala IPTABLES)
+  - `/etc/fail2ban/jail.local`: Configuración de Fail2ban
 
-## Soporte
+- **Modificación del script**:
+  Puede editar el script para ajustarlo a sus necesidades específicas antes de ejecutarlo.
 
-Si encuentra algún problema o tiene alguna pregunta, por favor abra un issue en este repositorio.
+## 🤝 Contribución
 
-## Licencia
+Las contribuciones son bienvenidas y apreciadas. Siga estos pasos:
+
+1. Fork el repositorio
+2. Cree una rama para su característica (`git checkout -b feature/nueva-caracteristica`)
+3. Realice sus cambios y haga commit (`git commit -m 'Añadir nueva característica'`)
+4. Empuje a la rama (`git push origin feature/nueva-caracteristica`)
+5. Abra un Pull Request
+
+Para cambios importantes, abra primero un issue para discutir lo que le gustaría cambiar.
+
+## 📝 Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT. Vea el archivo `LICENSE` para más detalles.
 
-## Autor
+## 👤 Autor
 
-Creado por PanXOS
-
-Contacto: faravena@soporteinfo.net
-
-GitHub: [https://github.com/panxos](https://github.com/panxos)
+<div align="center">
+  <b>Creado por PanXOS</b>
+  <br>
+  📧 Contacto: <a href="mailto:faravena@soporteinfo.net">faravena@soporteinfo.net</a>
+  <br>
+  🌐 GitHub: <a href="https://github.com/panxos">https://github.com/panxos</a>
+</div>
 
 ---
 
-**Nota**: Recuerde siempre revisar y entender cualquier script antes de ejecutarlo en su sistema, especialmente con privilegios de root.
+<div align="center">
+  <i>Recuerde revisar y entender cualquier script antes de ejecutarlo en su sistema, especialmente con privilegios de root.</i>
+</div>
